@@ -37,8 +37,6 @@ export default function Footer() {
   </ul>
 </div>
 
-
-        {/* Redes sociales */}
        {/* Redes sociales */}
 <div>
   <h5 className="text-xl font-bold mb-4 text-secondary">Redes Sociales</h5>
@@ -48,6 +46,7 @@ export default function Footer() {
       { href: "https://instagram.com", icon: "fab fa-instagram" },
       { href: "https://twitter.com", icon: "fab fa-twitter" },
       { href: "https://linkedin.com", icon: "fab fa-linkedin-in" },
+      { href: "https://wa.me/34610854449", icon: "fab fa-whatsapp" }, // Añadido WhatsApp
     ].map(({ href, icon }) => (
       <a
         key={href}
