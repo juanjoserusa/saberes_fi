@@ -7,7 +7,7 @@ export default function Home() {
 <section className="relative h-[400px] md:h-[500px] text-white flex items-center justify-center text-center px-4 overflow-hidden">
   {/* Imagen de fondo */}
   <img
-    src=".../assets/hero.jpg"  // Asegúrate de que esté copiada ahí
+    src="../assets/hero.jpg"  // Asegúrate de que esté copiada ahí
     alt="Alumno estudiando"
     className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
   />
