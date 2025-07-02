@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
 import TerminosCondiciones from './pages/TerminosCondiciones';
 import PoliticaCookies from './pages/PoliticaCookies';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <div className="min-h-screen bg-gray-200">
       <Navbar />
       <div className="p-4">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quienes-somos" element={<QuienesSomos />} />
