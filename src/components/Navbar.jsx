@@ -36,12 +36,12 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu dropdown */}
-      {menuOpen && (
+     {menuOpen && (
   <div className="md:hidden mt-4 flex flex-col space-y-2 text-primary font-medium px-4 text-center">
-    <Link to="/quienes-somos" className="hover:text-secondary transition">Quiénes Somos</Link>
-    <Link to="/donde-estamos" className="hover:text-secondary transition">Dónde Estamos</Link>
-    <Link to="/cursos-tarifas" className="hover:text-secondary transition">Cursos y Tarifas</Link>
-    <Link to="/contacto" className="hover:text-secondary transition">Contacto</Link>
+    <Link to="/quienes-somos" onClick={() => setMenuOpen(false)} className="hover:text-secondary transition">Quiénes Somos</Link>
+    <Link to="/donde-estamos" onClick={() => setMenuOpen(false)} className="hover:text-secondary transition">Dónde Estamos</Link>
+    <Link to="/cursos-tarifas" onClick={() => setMenuOpen(false)} className="hover:text-secondary transition">Cursos y Tarifas</Link>
+    <Link to="/contacto" onClick={() => setMenuOpen(false)} className="hover:text-secondary transition">Contacto</Link>
   </div>
 )}
     </nav>

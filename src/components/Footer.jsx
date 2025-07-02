@@ -17,13 +17,26 @@ export default function Footer() {
 
         {/* Información legal */}
         <div>
-          <h5 className="text-xl font-bold mb-4 text-secondary">Información Legal</h5>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Política de Privacidad</a></li>
-            <li><a href="#" className="hover:underline">Términos y Condiciones</a></li>
-            <li><a href="#" className="hover:underline">Política de Cookies</a></li>
-          </ul>
-        </div>
+  <h5 className="text-xl font-bold mb-4 text-secondary">Información Legal</h5>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <Link to="/politica-privacidad" className="hover:underline">
+        Política de Privacidad
+      </Link>
+    </li>
+    <li>
+      <Link to="/terminos-condiciones" className="hover:underline">
+        Términos y Condiciones
+      </Link>
+    </li>
+    <li>
+      <Link to="/politica-cookies" className="hover:underline">
+        Política de Cookies
+      </Link>
+    </li>
+  </ul>
+</div>
+
 
         {/* Redes sociales */}
        {/* Redes sociales */}
@@ -52,9 +65,20 @@ export default function Footer() {
       </div>
 
       {/* Footer final */}
-      <div className="text-center text-sm text-white mt-10 px-6">
-        © {new Date().getFullYear()} Saberes. Todos los derechos reservados.
-      </div>
+     <div className="text-center text-sm text-white mt-10 px-6 space-y-1">
+  <div>
+    © {new Date().getFullYear()} Saberes. Todos los derechos reservados.
+  </div>
+  <div className="text-xs text-white/80">
+    Creado por{" "}
+    <a
+      href="mailto:juanjoseruisan@gmail.com"
+      className="underline hover:text-secondary transition"
+    >
+      Juanjo Ruiz
+    </a>
+  </div>
+</div>
     </footer>
   );
 }

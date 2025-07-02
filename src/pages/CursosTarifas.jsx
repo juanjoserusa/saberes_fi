@@ -1,10 +1,17 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Card from "../components/Card";
 
 export default function CursosTarifas() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <section className="bg-gray-50 py-16 px-6 space-y-24">
       {/* Horarios */}
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-6xl mx-auto space-y-12" data-aos="fade-down">
         <h2 className="text-4xl font-extrabold text-primary text-center">
           Nuestro Horario
         </h2>
@@ -13,10 +20,10 @@ export default function CursosTarifas() {
           Ofrecemos la posibilidad de elegir el horario que mejor se adapte a sus necesidades, facilitando así la conciliación familiar.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6" data-aos="fade-up">
           <Card
             title="Primaria"
-            text="De 16:00 a 17:00 y de 17:00 a 18:00"
+            text="De 16:00 a 17:30 y de 17:00 a 18:00"
           />
           <Card
             title="Secundaria y Bachillerato"
@@ -24,7 +31,7 @@ export default function CursosTarifas() {
           />
         </div>
 
-        <div className="text-center mt-4">
+        <div className="text-center mt-4" data-aos="fade-up">
           <p className="text-md text-gray-700">
             <strong className="text-primary">De lunes a viernes:</strong> 16:00 a 21:00
           </p>
@@ -32,12 +39,12 @@ export default function CursosTarifas() {
       </div>
 
       {/* Tarifas */}
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-6xl mx-auto space-y-12" data-aos="fade-down">
         <h2 className="text-4xl font-extrabold text-primary text-center">
           Nuestras Tarifas
         </h2>
 
-        <div className="overflow-x-auto rounded-xl shadow">
+        <div className="overflow-x-auto rounded-xl shadow" data-aos="fade-up">
           <table className="min-w-full bg-white text-center text-sm">
             <thead className="bg-primary text-white">
               <tr>
@@ -72,12 +79,12 @@ export default function CursosTarifas() {
       </div>
 
       {/* Promociones */}
-      <div className="max-w-6xl mx-auto space-y-16">
+      <div className="max-w-6xl mx-auto space-y-16" data-aos="fade-down">
         <h2 className="text-4xl font-extrabold text-primary text-center">
           Descuentos y Promociones
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6" data-aos="fade-up">
           <Card
             title="Familias numerosas"
             text="50% de descuento en la matrícula."
@@ -92,21 +99,20 @@ export default function CursosTarifas() {
           />
         </div>
 
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto" data-aos="fade-up">
           <Card
             title="¡Trae un amigo!"
             text="Por cada amigo que inscribas en la academia, obtendrás 15 € de descuento en la siguiente mensualidad."
           />
 
-   <div className="text-center mt-10" data-aos="fade-down" data-aos-duration="800">
-  <a
-    href="/contacto"
-    className="inline-block bg-secondary text-primary font-semibold px-8 py-4 rounded-full shadow hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-lg"
-  >
-    Solicita información
-  </a>
-</div>
-
+          <div className="text-center mt-10" data-aos="fade-down">
+            <a
+              href="/contacto"
+              className="inline-block bg-secondary text-primary font-semibold px-8 py-4 rounded-full shadow hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-lg"
+            >
+              Solicita información
+            </a>
+          </div>
         </div>
       </div>
     </section>
